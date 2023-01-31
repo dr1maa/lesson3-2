@@ -1,5 +1,4 @@
-//Задан целочисленный список ArrayList.
-// Найти минимальное, максимальное и среднее ариф. из этого списка
+//Пусть дан произвольный список целых чисел, удалить из него четные числа
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -23,8 +22,14 @@ public class Main {
             if (i > max)
                 max = i;
         }
-
         System.out.println("минимальное число: " + min);
         System.out.println("максимальное число: " + max);
+        int sum = 0;
+
+        for (int i = 0; i < arr.size(); i++) {
+            sum += arr.get(i);
+        }
+
+        return sum / arr.size();
     }
 }
